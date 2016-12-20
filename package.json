@@ -1,0 +1,27 @@
+{
+  "name": "norepeat",
+  "version": "1.0.0",
+  "description": "check if it's repeat in seconds",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint ./ && mocha ./test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ltfyxkfh/node-no-repeat.git"
+  },
+  "keywords": [
+    "redis",
+    "repeat"
+  ],
+  "author": "diandainfo.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ltfyxkfh/node-no-repeat/issues"
+  },
+  "homepage": "https://github.com/ltfyxkfh/node-no-repeat#readme",
+  "devDependencies": {
+    "bluebird": "^3.4.6",
+    "redis": "^2.6.3"
+  }
+}
