@@ -10,19 +10,14 @@ NoRepeat.prototype.isRepeat = function(config, callback) {
         name = config.name,
         ttl = config.ttl || 30,
         key = 'noRepeat:' + name;
-    client.setnx(key, 'no-repeat', (error, n) => {
+    client.set(key, 'no-repeat', 'EX', ttl, 'NX', (error, n) => {
         if (error) {
             return callback(error);
         }
-        if (n == 0) {
-            return callback(null, false);
-        }
-        client.expire(key, ttl, (error) => {
-            if (error) {
-                return callback(error);
-            }
+        if (n === 'OK') {
             return callback(null, true);
-        })
+        }
+        return callback(null, false);
     })
 }
 
