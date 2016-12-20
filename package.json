@@ -1,6 +1,6 @@
 {
   "name": "norepeat",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "check if it's repeat in seconds",
   "main": "index.js",
   "scripts": {
