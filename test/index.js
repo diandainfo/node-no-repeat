@@ -1,12 +1,12 @@
-const redis = require('redis');
-const should = require('should');
-let client = redis.createClient({
+var redis = require('redis');
+var should = require('should');
+var client = redis.createClient({
     host: '127.0.0.1',
     db: 1
 });
-let NoRepeat = require('../index');
-let noRepeat = new NoRepeat(client);
-let name = `test${Math.random()*10000}`;
+var NoRepeat = require('../index');
+var noRepeat = new NoRepeat(client);
+var name = `test${Math.random()*10000}`;
 
 describe('noRepeat: 1 times/second', function() {
     describe('isRepeat', function() {
